@@ -1,0 +1,5 @@
+<launch>
+
+    <node pkg="mediapipe_pointing" type="DIP_detector_Canny.py" output="screen" name="DIP_detector_Canny" /> 
+
+</launch>

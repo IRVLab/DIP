@@ -1,0 +1,10 @@
+<launch>
+    <arg name="follow_yaw_pitch_ctr" default="true" />
+    <node pkg="target_following" type="bbox_yaw_pitch_controller.py" output="screen" name="bbox_yaw_pitch_controller">
+        <param name="follow_yaw_pitch_ctr"   value="$(arg follow_yaw_pitch_ctr)" />
+        <rosparam command="load" file="$(find target_following)/data/pointing_bbox_yaw_pitch_ctr_pid_params.yaml" />
+    </node>    
+
+    <node pkg="mediapipe_pointing" type="DIP_detector_SIFT.py" output="screen" name="DIP_detector_SIFT" /> 
+
+</launch>

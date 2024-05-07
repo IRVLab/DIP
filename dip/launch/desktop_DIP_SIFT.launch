@@ -1,0 +1,5 @@
+<launch>
+
+    <node pkg="mediapipe_pointing" type="DIP_detector_SIFT.py" output="screen" name="DIP_detector_SIFT" /> 
+
+</launch>
